@@ -1,15 +1,12 @@
 Name: sakura
 Summary: A lightweight terminal emulator with very few dependencies
-Version: 2.3.8
-Release: %mkrel 1
-License: GPL
+Version: 2.4.2
+Release: 1
+License: GPLv2
 Url: http://www.pleyades.net/david/sakura.php
 Group: Terminals
-Source: %{name}-%{version}.tar.bz2
+Source: http://launchpad.net/sakura/trunk/%{version}/+download/%{name}-%{version}.tar.bz2
 
-# patches in the form amarok-version-r<relnum> are referent to the KDE
-# commit numbered as <relnum>
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: cmake >= 2.4.5
 BuildRequires: libvte-devel >= 0.17.4
 
@@ -28,7 +25,7 @@ contextual menu with some basic options. No more no less.
 %{_bindir}/*
 %{_datadir}/applications/*
 %{_datadir}/pixmaps/*
-%{_mandir}/man1/sakura.1.lzma
+%{_mandir}/man1/sakura.1*
 
 #--------------------------------------------------------------------
 
@@ -41,11 +38,11 @@ contextual menu with some basic options. No more no less.
 %make
 
 %install
-rm -rf %buildroot
+rm -rf %{buildroot}
 cd build
-%{makeinstall_std}
+%makeinstall_std
 %find_lang %{name}
 
 %clean
-rm -rf %buildroot
+rm -rf %{buildroot}
 
