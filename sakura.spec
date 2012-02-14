@@ -1,11 +1,12 @@
 Name: sakura
 Summary: A lightweight terminal emulator with very few dependencies
 Version: 2.4.2
-Release: 1
+Release: 2
 License: GPLv2
-Url: http://www.pleyades.net/david/sakura.php
 Group: Terminals
-Source: http://launchpad.net/sakura/trunk/%{version}/+download/%{name}-%{version}.tar.bz2
+Url: http://www.pleyades.net/david/sakura.php
+Source0: http://launchpad.net/sakura/trunk/%{version}/+download/%{name}-%{version}.tar.bz2
+Patch0:	sakura-2.4.2_desktop-icon.patch
 
 BuildRequires: cmake >= 2.4.5
 BuildRequires: libvte-devel >= 0.17.4
@@ -19,21 +20,14 @@ the vte sources. The differences between sakura and the last one are that it
 uses a notebook to provide several terminals in one window and adds a
 contextual menu with some basic options. No more no less. 
 
-%files -f build/%{name}.lang
-%defattr(-,root,root) 
-%doc INSTALL
-%{_bindir}/*
-%{_datadir}/applications/*
-%{_datadir}/pixmaps/*
-%{_mandir}/man1/sakura.1*
-
-#--------------------------------------------------------------------
-
 %prep
 %setup -q
+%apply_patches
 
 %build
-%cmake -DLOCALE_INSTALL_DIR=%{_datadir}/locale -DLIB_INSTALL_DIR=%{_libdir}
+%cmake \
+	-DLOCALE_INSTALL_DIR=%{_datadir}/locale \
+	-DLIB_INSTALL_DIR=%{_libdir}
 
 %make
 
@@ -43,6 +37,10 @@ cd build
 %makeinstall_std
 %find_lang %{name}
 
-%clean
-rm -rf %{buildroot}
+%files -f build/%{name}.lang
+%doc INSTALL
+%{_bindir}/*
+%{_datadir}/applications/*
+%{_datadir}/pixmaps/*
+%{_mandir}/man1/sakura.1*
 
