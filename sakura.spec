@@ -1,15 +1,13 @@
 Name: sakura
 Summary: A lightweight terminal emulator with very few dependencies
-Version: 2.4.2
-Release: 2
+Version: 3.0.4
+Release: 1
 License: GPLv2
 Group: Terminals
 Url: http://www.pleyades.net/david/sakura.php
 Source0: http://launchpad.net/sakura/trunk/%{version}/+download/%{name}-%{version}.tar.bz2
-Patch0:	sakura-2.4.2_desktop-icon.patch
-
 BuildRequires: cmake >= 2.4.5
-BuildRequires: libvte-devel >= 0.17.4
+BuildRequires: vte-devel >= 0.17.4
 
 %description
 sakura is a terminal emulator based on GTK and VTE. It's a terminal emulator
@@ -32,7 +30,6 @@ contextual menu with some basic options. No more no less.
 %make
 
 %install
-rm -rf %{buildroot}
 cd build
 %makeinstall_std
 %find_lang %{name}
