@@ -8,6 +8,7 @@ Url: http://www.pleyades.net/david/sakura.php
 Source0: http://launchpad.net/sakura/trunk/%{version}/+download/%{name}-%{version}.tar.bz2
 BuildRequires: cmake >= 2.4.5
 BuildRequires: vte-devel >= 0.17.4
+BuildRequires: gtk+3-devel
 
 %description
 sakura is a terminal emulator based on GTK and VTE. It's a terminal emulator
