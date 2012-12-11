@@ -41,3 +41,24 @@ contextual menu with some basic options. No more no less.
 %{_datadir}/pixmaps/*
 %{_mandir}/man1/sakura.1*
 
+
+
+%changelog
+* Sun May 13 2012 Alexander Khrukin <akhrukin@mandriva.org> 3.0.4-1
++ Revision: 798596
+- BR: gtk+3-devel
+- version update 3.0.4
+
+* Tue Feb 14 2012 Matthew Dawkins <mattydaw@mandriva.org> 2.4.2-2
++ Revision: 773907
+- added patch to fix desktop icon
+- cleaned up spec
+
+* Wed Oct 26 2011 Matthew Dawkins <mattydaw@mandriva.org> 2.4.2-1
++ Revision: 707367
+- new version 2.4.2
+
+* Thu Aug 26 2010 Shlomi Fish <shlomif@mandriva.org> 2.3.8-1mdv2011.0
++ Revision: 573365
+- import sakura
+
