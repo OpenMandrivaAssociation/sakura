@@ -1,7 +1,7 @@
 Name: sakura
 Summary: A lightweight terminal emulator with very few dependencies
 Version: 3.0.4
-Release: 1
+Release: 2
 License: GPLv2
 Group: Terminals
 Url: http://www.pleyades.net/david/sakura.php
