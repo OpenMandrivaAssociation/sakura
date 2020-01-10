@@ -21,7 +21,7 @@ contextual menu with some basic options. No more no less.
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 
 %build
 %cmake \
