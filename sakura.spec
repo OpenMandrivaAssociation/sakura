@@ -4,7 +4,7 @@ Version: 3.0.4
 Release: 2
 License: GPLv2
 Group: Terminals
-Url: http://www.pleyades.net/david/sakura.php
+Url: https://www.pleyades.net/david/sakura.php
 Source0: http://launchpad.net/sakura/trunk/%{version}/+download/%{name}-%{version}.tar.bz2
 BuildRequires: cmake
 BuildRequires: pkgconfig(gtk+-3.0)
