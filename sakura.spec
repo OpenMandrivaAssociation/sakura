@@ -11,6 +11,7 @@ BuildRequires:	cmake
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(vte-2.91)
 BuildRequires:	pkgconfig(x11)
+BuildRequires:  gettext
 
 BuildSystem:	cmake
 
