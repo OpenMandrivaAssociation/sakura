@@ -19,9 +19,6 @@ Sakura is a terminal emulator and it's only dependencies are GTK and VTE.
 It uses a notebook to provide several terminals in one window and allows
 to change configuration options via a contextual menu. No more no less.
 
-%install -a
-%find_lang %{name}
-
 %files -f %{name}.lang
 %doc README.md
 %{_bindir}/%{name}
